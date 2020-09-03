@@ -1,38 +1,219 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(0deg, darkslateblue, mediumslateblue, slateblue);
+  color: whitesmoke;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  color: lightskyblue;
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a:hover {
+  text-decoration: underline;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+p {
+  max-width: 80vw;
+}
+p > span {
+  color: lightskyblue;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  max-width: 768px;
+  margin-top: 2rem;
+}
+
+input,
+button {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  padding: 0.6rem;
+  border-radius: 4px;
+  border: 2px solid slateblue;
+  outline: none;
+}
+
+input {
+  color: darkslateblue;
+}
+
+input:focus {
+  border-color: lightskyblue;
+}
+
+button {
+  color: whitesmoke;
+  background-color: darkslateblue;
+  border-color: darkslateblue;
+  margin: 1rem 0;
+  cursor: pointer;
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+
+button:focus,
+button:hover {
+  opacity: 1;
+  transition: opacity 0.2s;
+  border-color: lightskyblue;
+}
+
+.renderProviders {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.4rem 0;
+}
+
+label {
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
+  margin: 0 1rem;
+}
+
+input[type="radio"]:checked,
+input[type="radio"]:not(:checked) {
+  margin: 0 0 12px 0;
+  width: 18px;
+  height: 18px;
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked:before,
+input[type="radio"]:not(:checked):before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid slateblue;
+  border-radius: 100%;
+  background: whitesmoke;
+}
+
+input[type="radio"]:checked:after,
+input[type="radio"]:not(:checked):after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: slateblue;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border-radius: 100%;
+  transition: all 0.2s ease;
+}
+
+input[type="radio"]:not(:checked):after {
+  opacity: 0;
+  transform: scale(0);
+}
+
+input[type="radio"]:checked:after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+input[type="radio"]:focus:before,
+input[type="radio"]:checked:before {
+  border: 2px solid lightskyblue;
+}
+
+.iconProvider {
+  fill: whitesmoke;
+  margin: 0 0 6px 0;
+  width: 2rem;
+  height: 2rem;
+}
+
+.previewButton {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 1.4rem auto;
+  padding: 0.6rem 2.4rem;
 }
 
-.App-link {
-  color: #61dafb;
+.previewButton .icon {
+  fill: whitesmoke;
+  width: 1rem;
+  height: 1rem;
+  line-height: 1rem;
+  margin-left: 0.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.github {
+  display: inline-flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.github a {
+  margin-left: 4px;
+}
+
+.iconGithub {
+  fill: whitesmoke;
+  margin: 0 6px 0 0;
+  width: 1rem;
+  height: 1rem;
+}
+
+@media (min-width: 426px) {
+  .renderProviders {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 1rem;
+  }
+
+  input[type="radio"]:checked,
+  input[type="radio"]:not(:checked) {
+    margin: 0 12px 0 0;
+    width: 18px;
+    height: 18px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .iconProvider {
+    margin: 0 6px 0 0;
+    width: 1.6em;
+    height: 1.6rem;
   }
 }

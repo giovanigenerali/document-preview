@@ -1,5 +1,6 @@
 {
   "name": "document-preview",
+  "description": "Preview documents in MS Office or Google Drive",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
