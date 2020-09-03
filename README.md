@@ -2,7 +2,8 @@
 
 Preview documents in MS Office or Google Drive, supported files .doc, .docx, .xls, .xlxs, .ppt and .pptx
 
-[![License](https://img.shields.io/packagist/l/giovanigenerali/document-preview?style=for-the-badge)](https://github.com/giovanigenerali/document-preview/blob/master/LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](https://github.com/giovanigenerali/document-preview/pulls)
+[![GitHub license](https://img.shields.io/github/license/giovanigenerali/document-preview?style=for-the-badge)](https://github.com/giovanigenerali/document-preview/blob/master/LICENSE)
 
 # Preview
 
