@@ -15,8 +15,4 @@ Preview documents in MS Office or Google Drive, supported files .doc, .docx, .xl
 
 # Author
 
-<a href="https://github.com/giovanigenerali">
- <img style="border-radius: 50%;" src="https://github.com/giovanigenerali.png" width="80px" alt="Giovani Generali" />
- <br />
- Giovani Generali
-</a>
+- [@giovanigenerali](https://github.com/giovanigenerali)
