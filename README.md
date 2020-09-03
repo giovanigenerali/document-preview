@@ -7,6 +7,8 @@ Preview documents in MS Office or Google Drive, supported files .doc, .docx, .xl
 # Preview
 
 # Demo
+- https://document-preview.vercel.app
+- https://document-preview.netlify.app
 
 # Technologies
 
