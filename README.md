@@ -7,6 +7,8 @@ Preview documents in MS Office or Google Drive, supported files .doc, .docx, .xl
 
 # Preview
 ![screenshot](https://user-images.githubusercontent.com/41435/92179817-e3b46700-ee1b-11ea-8de3-3b81d6cdedcd.png)
+![ms-office](https://user-images.githubusercontent.com/41435/92180960-97b6f180-ee1e-11ea-9c89-7695129be157.png)
+![google-drive](https://user-images.githubusercontent.com/41435/92180966-9a194b80-ee1e-11ea-9857-da2e78e5d345.png)
 
 # Demo
 | Link | Deploy |
