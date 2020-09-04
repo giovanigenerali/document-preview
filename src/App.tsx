@@ -12,7 +12,7 @@ export default function App() {
     "https://file-examples-com.github.io/uploads/2017/02/file-sample_100kB.docx"
   );
   const [provider, setProvider] = useState("ms-office");
-  const uiLanguage = "pt-BR"; // en-US
+  const uiLanguage = "en-US";
 
   function handlePreview(event: React.ChangeEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -65,7 +65,7 @@ export default function App() {
         />
 
         <div className="renderProviders">
-          <label>
+          <label className={provider === "ms-office" ? "active" : ""}>
             <input
               type="radio"
               name="provider"
@@ -74,9 +74,9 @@ export default function App() {
               onChange={(event) => setProvider(event.target.value)}
             />
             <MSOfficeIcon className="iconProvider" />
-            MS Office
+            <span>MS Office</span>
           </label>
-          <label>
+          <label className={provider === "google-drive" ? "active" : ""}>
             <input
               type="radio"
               name="provider"
@@ -85,7 +85,7 @@ export default function App() {
               onChange={(event) => setProvider(event.target.value)}
             />
             <GoogleDriveIcon className="iconProvider" />
-            Google Drive
+            <span>Google Drive</span>
           </label>
         </div>
 

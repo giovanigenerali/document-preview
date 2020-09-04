@@ -75,9 +75,9 @@ button {
 
 button:focus,
 button:hover {
-  opacity: 1;
-  transition: opacity 0.2s;
   border-color: lightskyblue;
+  opacity: 1;
+  transition: opacity 0.2s ease;
 }
 
 .renderProviders {
@@ -93,6 +93,21 @@ label {
   align-items: center;
   cursor: pointer;
   margin: 0 1rem;
+}
+
+label > * {
+  opacity: 0.6;
+}
+
+label:hover,
+label:hover > * {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+label.active > * {
+  opacity: 1;
+  transition: opacity 0.2s ease;
 }
 
 input[type="radio"]:checked,
@@ -188,27 +203,16 @@ input[type="radio"]:checked:before {
 
 @media (min-width: 426px) {
   .renderProviders {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin: 2rem 0;
   }
 
   label {
-    display: flex;
     flex-direction: row;
-    align-items: center;
-    cursor: pointer;
-    margin: 0 1rem;
   }
 
   input[type="radio"]:checked,
   input[type="radio"]:not(:checked) {
     margin: 0 12px 0 0;
-    width: 18px;
-    height: 18px;
-    position: relative;
-    cursor: pointer;
   }
 
   .iconProvider {
